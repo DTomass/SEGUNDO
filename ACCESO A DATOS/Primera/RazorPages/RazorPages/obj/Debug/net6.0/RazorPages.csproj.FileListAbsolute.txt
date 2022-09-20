@@ -24,3 +24,7 @@ C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\Razo
 C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages\obj\Debug\net6.0\RazorPages.pdb
 C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages\obj\Debug\net6.0\RazorPages.genruntimeconfig.cache
 C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages\obj\Debug\net6.0\ref\RazorPages.dll
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages\obj\Debug\net6.0\RazorPages.csproj.CopyComplete
