@@ -5,7 +5,9 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPages", "RazorPages\RazorPages.csproj", "{5116640A-BA4E-4BC6-A1E8-F34466CC1211}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPages.Modelos", "RazorPages.Modelos\RazorPages.Modelos.csproj", "{BC5A2E82-9B68-458B-8870-ED4EED74AC5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPages.Modelos", "RazorPages.Modelos\RazorPages.Modelos.csproj", "{BC5A2E82-9B68-458B-8870-ED4EED74AC5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPages.Service", "RazorPages.Service\RazorPages.Service.csproj", "{F51DCCCE-2B8B-4322-8505-F39AC2935586}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BC5A2E82-9B68-458B-8870-ED4EED74AC5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC5A2E82-9B68-458B-8870-ED4EED74AC5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC5A2E82-9B68-458B-8870-ED4EED74AC5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F51DCCCE-2B8B-4322-8505-F39AC2935586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F51DCCCE-2B8B-4322-8505-F39AC2935586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F51DCCCE-2B8B-4322-8505-F39AC2935586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F51DCCCE-2B8B-4322-8505-F39AC2935586}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
