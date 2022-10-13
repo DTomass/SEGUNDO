@@ -6,6 +6,7 @@ import Controladores.util.PaginationHelper;
 import Facades.AutoresFacade;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.ResourceBundle;
 import javax.ejb.EJB;
 import javax.inject.Named;
@@ -185,7 +186,7 @@ public class AutoresController implements Serializable {
     }
 
     public SelectItem[] getItemsAvailableSelectOne() {
-        return JsfUtil.getSelectItems(ejbFacade.findAll(), true);
+        return getSelectItemsAutores(ejbFacade.autores_ordenados(), true);
     }
 
     public Autores getAutores(java.lang.Integer id) {
@@ -229,7 +230,14 @@ public class AutoresController implements Serializable {
                 throw new IllegalArgumentException("object " + object + " is of type " + object.getClass().getName() + "; expected type: " + Autores.class.getName());
             }
         }
-
     }
-
+    public static SelectItem[] getSelectItemsAutores(List<Autores> entities, boolean selectOne) {
+        int size = entities.size();
+        SelectItem[] items = new SelectItem[size];
+        int i = 0;
+        for (Autores x : entities) {
+            items[i++] = new SelectItem(x, x.getApellido1()+" "+x.getApellido2()+", "+x.getNomAutor());
+        }
+        return items;
+    }
 }

@@ -6,9 +6,11 @@
 package Facades;
 
 import Entidades.Autores;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 /**
  *
@@ -28,5 +30,10 @@ public class AutoresFacade extends AbstractFacade<Autores> {
     public AutoresFacade() {
         super(Autores.class);
     }
-    
+    public List<Autores> autores_ordenados(){
+        em = getEntityManager();
+        Query q;
+        q = em.createNamedQuery("Autores.findAllOrden");
+        return q.getResultList();
+    }
 }
