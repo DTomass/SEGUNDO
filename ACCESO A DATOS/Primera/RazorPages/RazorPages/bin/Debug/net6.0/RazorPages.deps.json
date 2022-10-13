@@ -8,7 +8,9 @@
     ".NETCoreApp,Version=v6.0": {
       "RazorPages/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "6.0.9"
+          "Microsoft.EntityFrameworkCore": "6.0.9",
+          "RazorPages.Modelos": "1.0.0",
+          "RazorPages.Service": "1.0.0"
         },
         "runtime": {
           "RazorPages.dll": {}
@@ -98,7 +100,20 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/6.0.0": {}
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
+      "RazorPages.Modelos/1.0.0": {
+        "runtime": {
+          "RazorPages.Modelos.dll": {}
+        }
+      },
+      "RazorPages.Service/1.0.0": {
+        "dependencies": {
+          "RazorPages.Modelos": "1.0.0"
+        },
+        "runtime": {
+          "RazorPages.Service.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -204,6 +219,16 @@
       "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "path": "system.runtime.compilerservices.unsafe/6.0.0",
       "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    },
+    "RazorPages.Modelos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RazorPages.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

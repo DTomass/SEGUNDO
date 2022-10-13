@@ -1,0 +1,12 @@
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Modelos\bin\Debug\net6.0\RazorPages.Modelos.deps.json
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Modelos\bin\Debug\net6.0\RazorPages.Modelos.dll
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Modelos\bin\Debug\net6.0\RazorPages.Modelos.pdb
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Modelos\obj\Debug\net6.0\RazorPages.Modelos.csproj.AssemblyReference.cache
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Modelos\obj\Debug\net6.0\RazorPages.Modelos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Modelos\obj\Debug\net6.0\RazorPages.Modelos.AssemblyInfoInputs.cache
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Modelos\obj\Debug\net6.0\RazorPages.Modelos.AssemblyInfo.cs
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Modelos\obj\Debug\net6.0\RazorPages.Modelos.csproj.CoreCompileInputs.cache
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Modelos\obj\Debug\net6.0\RazorPages.Modelos.dll
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Modelos\obj\Debug\net6.0\refint\RazorPages.Modelos.dll
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Modelos\obj\Debug\net6.0\RazorPages.Modelos.pdb
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Modelos\obj\Debug\net6.0\ref\RazorPages.Modelos.dll

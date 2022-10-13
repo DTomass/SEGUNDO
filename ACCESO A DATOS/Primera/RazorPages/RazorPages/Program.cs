@@ -1,7 +1,11 @@
+using RazorPages.Service;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddSingleton<IAlumnoRepositorio, AlumnoRepositorio>();
+//builder.Services.AddSingleton<IAlumnoRepositorio, AlumnoRepositorio>
 
 var app = builder.Build();
 

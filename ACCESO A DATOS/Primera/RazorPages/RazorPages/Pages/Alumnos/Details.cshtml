@@ -1,0 +1,21 @@
+﻿@page
+@model RazorPages.Pages.Alumnos.DetailsModel
+@{
+	var photo = "~/images/" + (Model.alumno.Foto ?? "nodisponible.jpg");
+}
+	<div class="row justify-content-center m-3">
+		<div class="card-header">
+			<h3>@Model.alumno.Nombre</h3>
+		</div>
+		<div class="card-body text-center">
+			<img class="card-img-top" scr="@photo" asp-append-version="true" />
+			<h4>Alumno Id : @Model.alumno.Id</h4>
+			<h4>Email : @Model.alumno.Email</h4>
+			<h4>Curso : @Model.alumno.CursoID</h4>
+		</div>
+		<div class="card-footer text-center">
+			<a asp-page="Index" class="btn btn-primary m-1">Back</a>
+			<a asp-page="/Alumnos/Edit" asp-route-ID="@Model.alumno.Id" class="btn btn-primary m-1">Edit</a>
+			<a href="#" class="btn btn-danger m-1">Delete</a>
+		</div>
+	</div>

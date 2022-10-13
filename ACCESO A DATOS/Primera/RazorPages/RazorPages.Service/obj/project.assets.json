@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "RazorPages.Modelos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/RazorPages.Modelos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RazorPages.Modelos.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "RazorPages.Modelos/1.0.0": {
+      "type": "project",
+      "path": "../RazorPages.Modelos/RazorPages.Modelos.csproj",
+      "msbuildProject": "../RazorPages.Modelos/RazorPages.Modelos.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "RazorPages.Modelos >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\danie\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\danie\\OneDrive\\Documents\\SEGUNDO\\ACCESO A DATOS\\Primera\\RazorPages\\RazorPages.Modelos\\RazorPages.Modelos.csproj": {
+              "projectPath": "C:\\Users\\danie\\OneDrive\\Documents\\SEGUNDO\\ACCESO A DATOS\\Primera\\RazorPages\\RazorPages.Modelos\\RazorPages.Modelos.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

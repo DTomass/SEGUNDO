@@ -246,6 +246,29 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "RazorPages.Modelos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/RazorPages.Modelos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RazorPages.Modelos.dll": {}
+        }
+      },
+      "RazorPages.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "RazorPages.Modelos": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RazorPages.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RazorPages.Service.dll": {}
+        }
       }
     }
   },
@@ -572,11 +595,23 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "RazorPages.Modelos/1.0.0": {
+      "type": "project",
+      "path": "../RazorPages.Modelos/RazorPages.Modelos.csproj",
+      "msbuildProject": "../RazorPages.Modelos/RazorPages.Modelos.csproj"
+    },
+    "RazorPages.Service/1.0.0": {
+      "type": "project",
+      "path": "../RazorPages.Service/RazorPages.Service.csproj",
+      "msbuildProject": "../RazorPages.Service/RazorPages.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Microsoft.EntityFrameworkCore >= 6.0.9"
+      "Microsoft.EntityFrameworkCore >= 6.0.9",
+      "RazorPages.Modelos >= 1.0.0",
+      "RazorPages.Service >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -611,7 +646,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\danie\\OneDrive\\Documents\\SEGUNDO\\ACCESO A DATOS\\Primera\\RazorPages\\RazorPages.Modelos\\RazorPages.Modelos.csproj": {
+              "projectPath": "C:\\Users\\danie\\OneDrive\\Documents\\SEGUNDO\\ACCESO A DATOS\\Primera\\RazorPages\\RazorPages.Modelos\\RazorPages.Modelos.csproj"
+            },
+            "C:\\Users\\danie\\OneDrive\\Documents\\SEGUNDO\\ACCESO A DATOS\\Primera\\RazorPages\\RazorPages.Service\\RazorPages.Service.csproj": {
+              "projectPath": "C:\\Users\\danie\\OneDrive\\Documents\\SEGUNDO\\ACCESO A DATOS\\Primera\\RazorPages\\RazorPages.Service\\RazorPages.Service.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

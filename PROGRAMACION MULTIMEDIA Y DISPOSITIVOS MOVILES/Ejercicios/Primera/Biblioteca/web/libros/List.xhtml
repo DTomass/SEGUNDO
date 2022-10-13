@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListLibrosTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListLibrosEmpty}" rendered="#{librosController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{librosController.items.rowCount > 0}">
+                    <h:outputText value="#{librosController.pagination.pageFirstItem + 1}..#{librosController.pagination.pageLastItem + 1}/#{librosController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{librosController.previous}" value="#{bundle.Previous} #{librosController.pagination.pageSize}" rendered="#{librosController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{librosController.next}" value="#{bundle.Next} #{librosController.pagination.pageSize}" rendered="#{librosController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{librosController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLibrosTitle_codLibro}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.codLibro}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLibrosTitle_nomLibro}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.nomLibro}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLibrosTitle_ano}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ano}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLibrosTitle_portada}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.portada}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLibrosTitle_nomArchivo}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.nomArchivo}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLibrosTitle_pelicula}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.pelicula}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLibrosTitle_comentario}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.comentario}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{librosController.prepareView}" value="#{bundle.ListLibrosViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{librosController.prepareEdit}" value="#{bundle.ListLibrosEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{librosController.destroy}" value="#{bundle.ListLibrosDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{librosController.prepareCreate}" value="#{bundle.ListLibrosCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListLibrosIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

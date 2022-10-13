@@ -1,0 +1,15 @@
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Service\obj\Debug\net6.0\RazorPages.Service.csproj.AssemblyReference.cache
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Service\obj\Debug\net6.0\RazorPages.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Service\obj\Debug\net6.0\RazorPages.Service.AssemblyInfoInputs.cache
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Service\obj\Debug\net6.0\RazorPages.Service.AssemblyInfo.cs
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Service\obj\Debug\net6.0\RazorPages.Service.csproj.CoreCompileInputs.cache
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Service\bin\Debug\net6.0\RazorPages.Service.deps.json
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Service\bin\Debug\net6.0\RazorPages.Service.dll
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Service\bin\Debug\net6.0\RazorPages.Service.pdb
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Service\bin\Debug\net6.0\RazorPages.Modelos.dll
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Service\bin\Debug\net6.0\RazorPages.Modelos.pdb
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Service\obj\Debug\net6.0\RazorPages.Service.csproj.CopyComplete
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Service\obj\Debug\net6.0\RazorPages.Service.dll
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Service\obj\Debug\net6.0\refint\RazorPages.Service.dll
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Service\obj\Debug\net6.0\RazorPages.Service.pdb
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages.Service\obj\Debug\net6.0\ref\RazorPages.Service.dll
