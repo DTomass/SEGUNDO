@@ -6,6 +6,8 @@ import Controladores.util.PaginationHelper;
 import Facades.AutoresFacade;
 
 import java.io.Serializable;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 import javax.ejb.EJB;
@@ -239,5 +241,22 @@ public class AutoresController implements Serializable {
             items[i++] = new SelectItem(x, x.getApellido1()+" "+x.getApellido2()+", "+x.getNomAutor());
         }
         return items;
+    }
+    public static int calc_Edad(Date fechaNac){
+        Calendar fechaActual = Calendar.getInstance();
+        Calendar fechaNacimiento = Calendar.getInstance();
+        fechaNacimiento.setTime(fechaNac);
+        int ano = fechaActual.get(Calendar.YEAR)-fechaNacimiento.get(Calendar.YEAR);
+        int mes = fechaActual.get(Calendar.MONTH)-fechaNacimiento.get(Calendar.MONTH);
+        int dia = fechaActual.get(Calendar.DATE)-fechaNacimiento.get(Calendar.DATE);
+        if((mes < 0)||(mes==0 && dia<0))
+            ano--;
+        return ano;
+    }
+    public static String mostrar_Edad(Date fechaDef){
+        if(fechaDef == null)
+            return "";
+        else
+            return "none";
     }
 }

@@ -20,42 +20,45 @@
                     <p:column headerText="Cod." width="50" style="text-align: center">
                         <h:outputText value="#{item.codAutor}" />
                     </p:column>
-                    <p:column headerText="Nombre">
-                        <h:outputText value="#{item.nomAutor}" />
-                    </p:column>
-                    <p:column headerText="Apellido1">
-                        <h:outputText value="#{item.apellido1}" />
-                    </p:column>
-                    <p:column headerText="Apellido2">
-                        <h:outputText value="#{item.apellido2}" />
+                    <p:column headerText="Nombre" filterBy="#{item.nomAutor} #{item.apellido1} #{item.apellido2}">
+                        <h:outputText value="#{item.nomAutor} #{item.apellido1} #{item.apellido2}" />
                     </p:column>
                     <p:column headerText="FechaNacimiento">
-                        <h:outputText value="#{item.FNac}" />
+                        <h:outputText value="#{item.FNac}">
+                            <f:convertDateTime pattern="dd/MM/yyyy"/>
+                        </h:outputText>
                     </p:column>
                     <p:column headerText="FechaDefuncion">
-                        <h:outputText value="#{item.FDef}" />
+                        <h:outputText value="#{item.FDef}" >
+                        <f:convertDateTime pattern="dd/MM/yyyy"/>
+                        </h:outputText>
+                    </p:column>
+                    <p:column headerText="Edad">
+                        <h:outputText value="#{autoresController.calc_Edad(item.FNac)}" style="display: #{autoresController.mostrar_Edad(item.FDef)}"/>
                     </p:column>
                     <p:column headerText="Foto">
-                        <h:outputText value="#{item.foto}" />
+                        <p:lightBox styleClass="imageBox">
+                        <h:outputLink value="/Biblioteca/faces/javax.faces.resources/#{item.foto}?ln=imagenes" title="#{item.nomAutor} #{item.apellido1} #{item.apellido2}">
+                            <h:graphicImage library="imagenes" name="#{item.foto}" height="50"/>
+                        </h:outputLink>
+                        </p:lightBox>
                     </p:column>
                     <p:column headerText="Localidad">
                         <h:outputText value="#{item.localidad}" />
                     </p:column>
-                    <p:column headerText="Biografia" >
-                        <h:outputText value="#{item.biografia}" />
+                    <p:column headerText="Libros">
+                        <h:selectManyListbox size="5" style="overflow-y: scroll; width: 180px; border: none; background: none; font-size: small">
+                            <f:selectItems var="libros" value="#{item.librosList}" itemLabel="#{libros.nomLibro}"/>
+                        </h:selectManyListbox>
                     </p:column>
-                    <p:column headerText="Nacionalidad">
-                        <h:outputText value="#{item.nacionalidad}" />
+                    <p:column headerText="Nacionalidad" filterBy="#{item.nacionalidad.nomPais}">
+                            <h:graphicImage library="banderas" name="#{item.nacionalidad.bandera}" height="50"/>
+                            <h:outputText value="#{item.nacionalidad.nomPais}"/>
                     </p:column>
                     <p:column headerText="">
-                        <f:facet name="header">
-                                <h:outputText value="&nbsp;"/>
-                            </f:facet>
-                            <h:commandLink action="#{autoresController.prepareView}" value="#{bundle.ListAutoresViewLink}"/>
-                            <h:outputText value=" "/>
-                            <h:commandLink action="#{autoresController.prepareEdit}" value="#{bundle.ListAutoresEditLink}"/>
-                            <h:outputText value=" "/>
-                            <h:commandLink action="#{autoresController.destroy}" value="#{bundle.ListAutoresDestroyLink}"/>
+                            <p:commandButton icon="pi pi-desktop" styleClass="rounded-button ui-button ui-button-flat" action="#{autoresController.prepareView}"/>
+                            <p:commandButton icon="pi pi-pencil" styleClass="rounded-button ui-button ui-button-flat" action="#{autoresController.prepareEdit}"/>
+                            <p:commandButton icon="pi pi-times" styleClass="rounded-button ui-button-danger ui-button-flat" action="#{autoresController.destroy}"/>
                     </p:column>
                     <br />
                         <h:commandLink action="#{autoresController.prepareCreate}" value="#{bundle.ListAutoresCreateLink}"/>

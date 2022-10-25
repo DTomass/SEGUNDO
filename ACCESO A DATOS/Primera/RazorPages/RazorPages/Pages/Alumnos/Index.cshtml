@@ -5,6 +5,10 @@
 }
 <h1>@Model.Alumnos.Count() ALUMNOS</h1>
 <div class="card-group">
+
+	<div class="col-sm-8">
+		@await Component.InvokeAsync("AlumnosCursoContar")
+	</div>
 	@foreach(var alumno in Model.Alumnos)
 	{
 		var photo = "~/images/" + (alumno.Foto ?? "nodisponible.jpg");
@@ -16,7 +20,7 @@
 			<div class="card-footer text-center">
 				<a asp-page="/Alumnos/Details" asp-route-ID="@alumno.Id" class="btn btn-primary m-1">View</a>
 				<a asp-page="/Alumnos/Edit" asp-route-ID="@alumno.Id" class="btn btn-primary m-1">Edit</a>
-				<a href="#" class="btn btn-danger m-1">Delete</a>
+				<a asp-page="/Alumnos/Delete" asp-route-ID="@alumno.Id" class="btn btn-danger m-1">Delete</a>
 			</div>
 		</div>
 

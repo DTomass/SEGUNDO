@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<style>
+		.red
+		{
+			color: black;
+			background-color: red;
+			border: 1px solid black;
+		}
+		.sinpadding{
+			padding: 0;
+		}
+		.casilla
+		{
+			aspect-ratio: 2.3333333/1;
+			color: black;
+			background-color: white;
+			border: 1px solid black;
+		}
+		.casilla2
+		{
+			aspect-ratio: 2.3333333/1;
+			color: black;
+			background-color: white;
+			border: 1px solid black;
+			text-align: right;
+		}
+		.ficha{
+			border: 2px solid black;
+			position: absolute;
+			top: 0%;
+			right: 30%;
+			height: 100%;
+			aspect-ratio: 1/1;
+			background:#836700;
+			border-radius:50%;
+		}
+		.rotateup{
+			transform: rotate(180deg);
+		}
+		.rotateleft{
+			transform: rotate(90deg);
+		}
+		.rotateright{
+			transform: rotate(270deg);
+		}
+		.green
+		{
+			color: black;
+			background-color: green;
+			border: 1px solid black;
+		}
+		
+		.blue
+		{
+			color: black;
+			background-color: blue;
+			border: 1px solid black;
+		}
+		.yellow
+		{
+			color: black;
+			background-color: yellow;
+			border: 1px solid black;
+		}
+		.cuadrado{
+			aspect-ratio: 1/1;
+			height: 100%;
+		}
+
+	</style>
+</head>
+<body class="container" style="min-width: 500px;">
+	<div class="row">
+		<div class="col-4">
+			<div class="row">
+				<div class="col-6 red cuadrado">d</div>
+				<div class="col-6 red cuadrado">d</div>
+			</div>
+			<div class="row">
+				<div class="col-6 red cuadrado">d</div>
+				<div class="col-6 red cuadrado">d</div>
+			</div>
+		</div>
+		<div class="col-4 rotateup">
+			<div class="row">
+				<div class="col-4 casilla2">27</div>
+				<div class="col-4 red"></div>
+				<div class="col-4 casilla">41</div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">28</div>
+				<div class="col-4 red"></div>
+				<div class="col-4 casilla">40</div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">29
+					<div class="ficha"></div></div>
+				<div class="col-4 red"></div>
+				<div class="col-4 red">39
+					<div class="ficha"></div></div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">30</div>
+				<div class="col-4 red"></div>
+				<div class="col-4 casilla">38</div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">31</div>
+				<div class="col-4 red"></div>
+				<div class="col-4 casilla">37</div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">32</div>
+				<div class="col-4 red"></div>
+				<div class="col-4 casilla">36</div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">33</div>
+				<div class="col-4 casilla">34
+					<div class="ficha"></div>
+				</div>
+				<div class="col-4 casilla2">35</div>
+			</div>
+		</div>
+		<div class="col-4">
+			<div class="row">
+				<div class="col-6 blue cuadrado">d</div>
+				<div class="col-6 blue cuadrado">d</div>
+			</div>
+			<div class="row">
+				<div class="col-6 blue cuadrado">d</div>
+				<div class="col-6 blue cuadrado">d</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-4 rotateleft">
+			<div class="row">
+				<div class="col-4 casilla2">44</div>
+				<div class="col-4 green"></div>
+				<div class="col-4 casilla">58</div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">45</div>
+				<div class="col-4 green"></div>
+				<div class="col-4 casilla">57</div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">46<div class="ficha"></div></div>
+				<div class="col-4 green"></div>
+				<div class="col-4 green">5<div class="ficha"></div></div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">47</div>
+				<div class="col-4 green"></div>
+				<div class="col-4 casilla">55</div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">48</div>
+				<div class="col-4 green"></div>
+				<div class="col-4 casilla">54</div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">49</div>
+				<div class="col-4 green"></div>
+				<div class="col-4 casilla">53</div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">50</div>
+				<div class="col-4 casilla">51<div class="ficha"></div></div>
+				<div class="col-4 casilla">52</div>
+			</div>
+		</div>
+		<div class="col-4 sinpadding">
+			<div class="media">
+				<div class="media-body">
+					<img src="Images/parchis.png" class="img-fluid" alt="Responsive image" style="height: 100%; width: 100%; ">
+				</div>
+			</div>
+		</div>
+		<div class="col-4 rotateright">
+			<div class="row">
+				<div class="col-4 casilla2">10</div>
+				<div class="col-4 blue"></div>
+				<div class="col-4 casilla">24</div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">11</div>
+				<div class="col-4 blue"></div>
+				<div class="col-4 casilla">23</div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">12<div class="ficha"></div></div>
+				<div class="col-4 blue"></div>
+				<div class="col-4 blue">22<div class="ficha"></div></div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">13</div>
+				<div class="col-4 blue"></div>
+				<div class="col-4 casilla">21</div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">14</div>
+				<div class="col-4 blue"></div>
+				<div class="col-4 casilla">20</div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">15</div>
+				<div class="col-4 blue"></div>
+				<div class="col-4 casilla">19</div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">16</div>
+				<div class="col-4 casilla">17<div class="ficha"></div></div>
+				<div class="col-4 casilla">18</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-4">
+			<div class="row">
+				<div class="col-6 green cuadrado">d</div>
+				<div class="col-6 green cuadrado">d</div>
+			</div>
+			<div class="row">
+				<div class="col-6 green cuadrado">d</div>
+				<div class="col-6 green cuadrado">d</div>
+			</div>
+		</div>
+		<div class="col-4">
+			<div class="row">
+				<div class="col-4 casilla2">61</div>
+				<div class="col-4 yellow"></div>
+				<div class="col-4 casilla">7</div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">62</div>
+				<div class="col-4 yellow"></div>
+				<div class="col-4 casilla">6</div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">63<div class="ficha"></div></div>
+				<div class="col-4 yellow"></div>
+				<div class="col-4 yellow">5<div class="ficha"></div></div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">64</div>
+				<div class="col-4 yellow"></div>
+				<div class="col-4 casilla">4</div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">65</div>
+				<div class="col-4 yellow"></div>
+				<div class="col-4 casilla">3</div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">66</div>
+				<div class="col-4 yellow"></div>
+				<div class="col-4 casilla">2</div>
+			</div>
+			<div class="row">
+				<div class="col-4 casilla2">67</div>
+				<div class="col-4 casilla">68<div class="ficha"></div></div>
+				<div class="col-4 casilla">1</div>
+			</div>
+		</div>
+		<div class="col-4">
+			<div class="row">
+				<div class="col-6 yellow cuadrado"></div>
+				<div class="col-6 yellow cuadrado"></div>
+			</div>
+			<div class="row">
+				<div class="col-6 yellow cuadrado"></div>
+				<div class="col-6 yellow cuadrado"></div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

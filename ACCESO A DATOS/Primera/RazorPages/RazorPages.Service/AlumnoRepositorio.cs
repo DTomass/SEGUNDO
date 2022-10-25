@@ -36,8 +36,31 @@ namespace RazorPages.Service
             alumno.Nombre = alumnoActualizado.Nombre;
             alumno.Email = alumnoActualizado.Email;
             alumno.CursoID = alumnoActualizado.CursoID;
+            alumno.Foto = alumnoActualizado.Foto;
 
             return alumno;
+        }
+        public Alumno Delete(int id)
+        {
+            Alumno alumno = GetAlumno(id);
+            ListaAlumnos.Remove(alumno);
+            return alumno;
+        }
+        public Alumno Add(Alumno alumnoNuevo)
+        {
+            alumnoNuevo.Id = ListaAlumnos.Max(a=>a.Id) + 1;
+            ListaAlumnos.Add(alumnoNuevo);
+            return alumnoNuevo;
+        }
+
+        public IEnumerable<CursoCuantos> AlumnosPorCurso()
+        {
+            return ListaAlumnos.GroupBy(a => a.CursoID)
+                .Select(g => new CursoCuantos()
+                {
+                    Clase = g.Key.Value,
+                    NumAlumnos = g.Count()
+                }).ToList();
         }
     }
 }
