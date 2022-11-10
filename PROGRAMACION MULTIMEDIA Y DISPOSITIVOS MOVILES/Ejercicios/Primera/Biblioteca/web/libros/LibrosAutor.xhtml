@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
 
     <ui:composition template="/template.xhtml">
         <ui:define name="title">
@@ -11,11 +12,23 @@
         </ui:define>
         <ui:define name="body">
             <h:form styleClass="jsfcrud_list_form">
-                <h:selectOneMenu >
-                    <f:selectItems value="#{autoresController.itemsAvailableSelectOne}"/>
-                </h:selectOneMenu>
+                <p:toolbar style="margin-bottom: 10px; width: 59%; float: left">
+                    <f:facet name="left">
+                        <h:selectOneMenu >
+                            <f:selectItems value="#{autoresController.itemsAvailableSelectOne}"/>
+                        </h:selectOneMenu>
+                    </f:facet>
+                    <f:facet name="right">
+                        <h:selectOneMenu >
+                            <f:selectItems value="#{autoresController.itemsAvailableSelectOne}"/>
+                        </h:selectOneMenu>
+                    </f:facet>
+                </p:toolbar>
             </h:form>
         </ui:define>
     </ui:composition>
+    <p:galleria value="#{LibrosController.libros}" var="libros" showCaption="true" style="max-width: 640px" panelWidth="" transitionInterval="2000">
+        <p:graphicImage library="portadas" name="#{libros.portada}" style="width: 100%" />
+    </p:galleria>
 
 </html>

@@ -30,10 +30,11 @@ namespace RazorPages.Pages.Alumnos
         }
         public IActionResult OnPost(Alumno alumno)
         {
-            if(Photo != null){
+            if (Photo != null)
+            {
                 if (alumno.Foto != null)
                 {
-                    string 
+                    string var = "hlo";
                 }
             }
             alumnoRepositorio.Update(alumno);

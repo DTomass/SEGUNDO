@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+	<style>
+		.red{
+			background-color: red;
+			border: 2px solid black;
+			text-align: center;
+		}
+		.yellow{
+			background-color: yellow;
+			border: 2px solid black;
+			text-align: center;
+		}
+		.orange{
+			background-color: orange;
+			border: 2px solid black;
+			text-align: center;
+		}
+		.blue{
+			background-color: cyan;
+			border: 2px solid black;
+			text-align: center;
+		}
+		.green{
+			background-color: greenyellow;
+			border: 2px solid black;
+			text-align: center;
+		}
+		.purple{
+			background-color: purple;
+			border: 2px solid black;
+			text-align: center;
+		}
+	</style>
+</head>
+<body class="container-fluid">
+	<div class="row">
+		<div class="d-lg-none d-md-block col-4 col-sm-4 col-md-8 col-lg-4 red">A</div>
+		<div class="order-lg-2 col-4 col-sm-4 col-md-4 col-lg-8 yellow">B</div>
+		<div class="order-lg-1 col-4 col-sm-4 col-md-3 col-lg-4 orange">C</div>
+	</div>
+	<div class="row">
+		<div class="d-lg-none d-md-block offset-4 offset-sm-4 offset-md-0 offset-lg-4 col-4 col-sm-4 col-md-4 col-lg-4 blue">D</div>
+	</div>
+	<div class="row">
+		<div class="col-4 col-4 col-sm-4 offset-lg-4 col-md-9 col-lg-5 green">E</div>
+		<div class="offset-4 offset-md-0 col-4 col-sm-4 col-md-9 col-lg-9 purple">F</div>
+	</div>
+</body>
+</html>

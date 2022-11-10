@@ -32,3 +32,6 @@ C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\Razo
 C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages\bin\Debug\net6.0\RazorPages.Service.dll
 C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages\bin\Debug\net6.0\RazorPages.Modelos.pdb
 C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages\bin\Debug\net6.0\RazorPages.Service.pdb
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\RazorPages\RazorPages\bin\Debug\net6.0\Newtonsoft.Json.dll

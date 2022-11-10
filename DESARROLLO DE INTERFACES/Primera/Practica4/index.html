@@ -38,52 +38,44 @@
                 <video src="https://www.ssangyong.es/uploads/modelos/rexton/header-rexton22.mp4" autoplay muted loop poster="https://www.ssangyong.es/uploads/modelos/rexton/header22.jpg" width="100%">
             </div>
         </div>
-        <div class="container-fluid">
-            <!-- BARRA NAVEGACIÓN -->
-            <div class="bg-dark">
-                <nav class="navbar navbar-expand-md navbar-dark bg-dark border-3 border-bottom border-primary fixed-top">
-                    <div class="row">    
-                        <a href="index.html">
-                            <img src="Coche/Logo.jpg" class="img-fluid img-thumbnail" alt="Responsive image" style="width: 90px;">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark border-3 border-bottom border-primary fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">
+                <img src="Coche/Logo.jpg" class="img-thumbnail" style="max-width: 70px;">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Contactos.html">Contactos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Configuracion.html">Configuralo</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        FichaTecnica
                         </a>
-                    </div>
-                    <div>
-                    </div>
-                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#MenuNavegacion">
-                                <span class="navbar-toggler-icon"></span>
-                        </button>
-        
-                    <div id="MenuNavegacion" class="collapse navbar-collapse">
-                        <div class="container">
-                            <div class="row ">
-                        <ul class="navbar-nav ms-3">
-                            <li class="nav-item">
-                                <a class="nav-link" href="Contactos.html">Contactanos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="Configuracion.html">Configuralo</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                                  Ficha tecnica
-                                </a>
-                                <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="FichaTecnica.html">Segun Modelo</a></li>
-                                  <li><a class="dropdown-item" href="https://www.ssangyong.es/uploads/documentacion/fichas_tecnicas/ficha-rexton-jun22-88.pdf">Manual</a></li>
-                                  <li><a class="dropdown-item" href="#">Galeria</a></li>
-                                </ul>
-                            </li>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="FichaTecnica.html">FichaTecnica</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
-
-                                <form class="form-inline">
-                                    <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Inicia Sesion</a>
+                    </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                    </form>
+                </div>
             </div>
+        </nav>
     </header>
     <section>
         <div class="row">

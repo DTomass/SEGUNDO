@@ -188,7 +188,7 @@ public class AutoresController implements Serializable {
     }
 
     public SelectItem[] getItemsAvailableSelectOne() {
-        return getSelectItemsAutores(ejbFacade.autores_ordenados(), true);
+        return getSelectAutores(ejbFacade.autores_ordenados(), true);
     }
 
     public Autores getAutores(java.lang.Integer id) {
@@ -233,7 +233,7 @@ public class AutoresController implements Serializable {
             }
         }
     }
-    public static SelectItem[] getSelectItemsAutores(List<Autores> entities, boolean selectOne) {
+    public static SelectItem[] getSelectAutores(List<Autores> entities, boolean selectOne) {
         int size = entities.size();
         SelectItem[] items = new SelectItem[size];
         int i = 0;

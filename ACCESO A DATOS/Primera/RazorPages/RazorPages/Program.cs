@@ -1,4 +1,5 @@
 using RazorPages.Service;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +7,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton<IAlumnoRepositorio, AlumnoRepositorio>();
 //builder.Services.AddSingleton<IAlumnoRepositorio, AlumnoRepositorio>
+
+IConfiguration configuration = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json")
+    .AddEnvironmentVariables()
+    .Build();
+
+builder.Services.AddDbContextPool<AlumnoDBContext>(options => options.UseSqlServer(configuration.GetConnectionString("ColegioDbConnection")));
 
 var app = builder.Build();
 

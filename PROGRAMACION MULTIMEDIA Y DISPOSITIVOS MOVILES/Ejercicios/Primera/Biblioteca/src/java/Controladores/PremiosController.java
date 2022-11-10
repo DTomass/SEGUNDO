@@ -28,6 +28,7 @@ public class PremiosController implements Serializable {
     private Facades.PremiosFacade ejbFacade;
     private PaginationHelper pagination;
     private int selectedItemIndex;
+    private Premios paraCrear;
 
     public PremiosController() {
     }

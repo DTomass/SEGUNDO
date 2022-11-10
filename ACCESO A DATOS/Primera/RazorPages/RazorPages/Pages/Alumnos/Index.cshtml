@@ -4,11 +4,16 @@
 
 }
 <h1>@Model.Alumnos.Count() ALUMNOS</h1>
-<div class="card-group">
-
-	<div class="col-sm-8">
-		@await Component.InvokeAsync("AlumnosCursoContar")
+<form method="get">
+	<div class="input-ground">
+		<input class="form-control" asp-for="elementoABuscar"/>
+		<button type="submit" class="btn btn-primary">Buscar</button>
 	</div>
+</form>
+<div class="col-sm-8">
+	@await Component.InvokeAsync("AlumnosCurso")
+</div>
+<div class="card-group">
 	@foreach(var alumno in Model.Alumnos)
 	{
 		var photo = "~/images/" + (alumno.Foto ?? "nodisponible.jpg");
