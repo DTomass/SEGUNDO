@@ -186,11 +186,16 @@ public class PremiosController implements Serializable {
     }
 
     public SelectItem[] getItemsAvailableSelectOne() {
-        return JsfUtil.getSelectItems(ejbFacade.findAll(), true);
+        return JsfUtil.getSelectItems(ejbFacade.premiosLibros(), true);
     }
 
     public Premios getPremios(java.lang.Integer id) {
         return ejbFacade.find(id);
+    }
+    
+    public static SelectItem[] getSelectPremios(List<Premios> entidades){
+        int size = entities.size();
+        
     }
 
     @FacesConverter(forClass = Premios.class)

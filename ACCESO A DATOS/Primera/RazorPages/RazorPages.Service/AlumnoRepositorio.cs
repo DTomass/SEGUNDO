@@ -40,12 +40,6 @@ namespace RazorPages.Service
 
             return alumno;
         }
-        public Alumno Delete(int id)
-        {
-            Alumno alumno = GetAlumno(id);
-            ListaAlumnos.Remove(alumno);
-            return alumno;
-        }
         public Alumno Add(Alumno alumnoNuevo)
         {
             alumnoNuevo.Id = ListaAlumnos.Max(a=>a.Id) + 1;
@@ -75,6 +69,12 @@ namespace RazorPages.Service
                 return ListaAlumnos;
             }
             return ListaAlumnos.Where(a => a.Nombre.Contains(elementoABuscar)).ToList();
+        }
+
+        void IAlumnoRepositorio.Delete(int id)
+        {
+            Alumno alumno = GetAlumno(id);
+            ListaAlumnos.Remove(alumno);
         }
     }
 }

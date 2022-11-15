@@ -33,7 +33,7 @@
                         <f:selectItems value="#{autoresController.itemsAvailableSelectOne}" itemLabel="#{autor}" var="Autores" itemValue="#{Autores.codAutor}"></f:selectItems>
                     </h:selectManyListbox>
                     <h:selectManyListbox value="#{premiosController.selected.autorPremioList}" size="5" style="width: 240px">
-                        <f:selectItems value="#{premiosController.itemsAvailableSelectOne}" itemLabel="#{Premios}" var="Autores" itemValue="#{Premios}"></f:selectItems>
+                        <f:selectItems value="#{premiosController.itemsAvailableSelectOne}" var="Premio" itemValue="#{Premios}" itemLabel="#{Premios.nomPremio}"></f:selectItems>
                     </h:selectManyListbox>
                 </h:panelGrid>
                 <br />

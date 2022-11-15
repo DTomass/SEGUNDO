@@ -8,7 +8,7 @@ namespace RazorPages.Service
         Alumno GetAlumno(int id);
         Alumno Update(Alumno alumnoActualizado);
         Alumno Add(Alumno alumnoNuevo);
-        Alumno Delete(int id);
+        void Delete(int id);
         IEnumerable<CursoCuantos> AlumnosPorCurso(Curso? curso=null);
         IEnumerable<Alumno> Busqueda(string elementoABuscar);
         

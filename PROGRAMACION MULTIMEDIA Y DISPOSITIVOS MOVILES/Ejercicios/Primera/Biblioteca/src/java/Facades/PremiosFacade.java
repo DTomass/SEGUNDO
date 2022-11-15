@@ -9,6 +9,8 @@ import Entidades.Premios;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import java.util.List;
 
 /**
  *
@@ -28,5 +30,16 @@ public class PremiosFacade extends AbstractFacade<Premios> {
     public PremiosFacade() {
         super(Premios.class);
     }
-    
+    public List<Premios> premiosLibros(){
+        em = getEntityManager();
+        Query q;
+        q = em.createNamedQuery("Premios.findTipoLibro");
+        return q.getResultList();
+    }
+    public List<Premios> premiosAutores(){
+        em = getEntityManager();
+        Query q;
+        q = em.createNamedQuery("Premios.findTipoAutor");
+        return q.getResultList();
+    }
 }

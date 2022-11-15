@@ -32,9 +32,17 @@ namespace RazorPages.Pages.Alumnos
         {
             if (Photo != null)
             {
-                if (alumno.Foto != null)
+                alumno.Foto = Photo.FileName;
+            }
+            if (ModelState.IsValid)
+            {
+                if (Photo != null)
                 {
-                    string var = "hlo";
+                    if(alumno.Foto != null)
+                    {
+                        string filePath = Path.Combine(WebHostBuilder, "");
+                        System.IO.File.Delete(filePath);
+                    }
                 }
             }
             alumnoRepositorio.Update(alumno);

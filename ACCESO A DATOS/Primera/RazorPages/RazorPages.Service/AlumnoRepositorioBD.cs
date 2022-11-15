@@ -24,32 +24,55 @@ namespace RazorPages.Service
 
         public IEnumerable<CursoCuantos> AlumnosPorCurso(Curso? curso = null)
         {
-            throw new NotImplementedException();
+            IEnumerable<Alumno> consulta = context.Alumnos;
+
+            if (curso.HasValue)
+            {
+                consulta = context.Alumnos.Where(a => a.CursoID == curso);
+            }
+
+            return consulta.GroupBy(a => a.CursoID)
+                .Select(g => new CursoCuantos()
+                {
+                    Clase = g.Key.Value,
+                    NumAlumnos = g.Count()
+                }).ToList();
         }
 
         public IEnumerable<Alumno> Busqueda(string elementoABuscar)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(elementoABuscar))
+            {
+                return context.Alumnos;
+            }
+            return context.Alumnos.Where(a => a.Nombre.Contains(elementoABuscar) || a.Email.Contains(elementoABuscar));
         }
 
-        public Alumno Delete(int id)
+        public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var alumnoABorrar = GetAlumno(id);
+            if (alumnoABorrar != null)
+            {
+                context.Alumnos.Remove(alumnoABorrar);
+            }
         }
 
         public IEnumerable<Alumno> GetAllAlumnos()
         {
-            throw new NotImplementedException();
+            return context.Alumnos;
         }
 
         public Alumno GetAlumno(int id)
         {
-            throw new NotImplementedException();
+            return context.Alumnos.Find(id); //Busca por el campo que sea primary key
         }
 
         public Alumno Update(Alumno alumnoActualizado)
         {
-            throw new NotImplementedException();
+            var alumno = context.Alumnos.Attach(alumnoActualizado);
+            alumno.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            
+            return alumnoActualizado;
         }
     }
 }
