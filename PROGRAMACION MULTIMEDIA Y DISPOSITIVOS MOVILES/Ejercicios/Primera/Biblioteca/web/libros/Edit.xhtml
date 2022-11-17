@@ -29,6 +29,12 @@
                     <h:inputText id="pelicula" value="#{librosController.selected.pelicula}" title="#{bundle.EditLibrosTitle_pelicula}" />
                     <h:outputLabel value="#{bundle.EditLibrosLabel_comentario}" for="comentario" />
                     <h:inputTextarea rows="4" cols="30" id="comentario" value="#{librosController.selected.comentario}" title="#{bundle.EditLibrosTitle_comentario}" />
+                    <h:selectManyListbox value="#{premiosController.selected.autorPremioList}" size="5" style="width: 240px">
+                        <f:selectItems value="#{autoresController.itemsAvailableSelectOne}" var="Autores" itemValue="#{Autores}" itemLabel="#{Autores.nomAutor}"></f:selectItems>
+                    </h:selectManyListbox>
+                    <h:selectManyListbox value="#{premiosController.selected.autorPremioList}" size="5" style="width: 240px">
+                        <f:selectItems value="#{premiosController.itemsAvailableSelectOne}" var="Premio" itemValue="#{Premios}" itemLabel="#{Premios.nomPremio}"></f:selectItems>
+                    </h:selectManyListbox>
                 </h:panelGrid>
                 <h:commandLink action="#{librosController.update}" value="#{bundle.EditLibrosSaveLink}"/>
                 <br />

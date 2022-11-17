@@ -2,6 +2,7 @@
 @model RazorPages.Pages.Alumnos.EditModel
 @{
 	var photo = "~/images/" + (Model.alumno.Foto ?? "nodisponible.jpg");
+	Model.alumno.Foto = (Model.alumno.Foto ?? "Nodisponible.jpg");
 }
 	<h1>Edicion datos alumno</h1>
 	<div>
