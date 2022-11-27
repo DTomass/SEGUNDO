@@ -1,0 +1,43 @@
+<odoo>
+    <record model="ir.actions.act_window" id="action_list_cursos">
+        <field name="name">Curso</field>
+        <field name="res_model">openacademy.course</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_cursos" name="Curso" sequence="10"
+          action="action_list_cursos"/>
+    <form string="Idea form">
+    <group colspan="4">
+        <group colspan="2" col="2">
+            <separator string="General stuff" colspan="2"/>
+            <field name="name"/>
+            <field name="inventor_id"/>
+        </group>
+
+        <notebook colspan="4">
+            <page string="Description">
+                <field name="description" nolabel="1"/>
+            </page>
+        </notebook>
+
+        <field name="state"/>
+    </group>
+</form>
+
+
+    
+    
+    <record model="openacademy.course" id="curso0">
+        <field name="name">Mates</field>
+        <field name="description">Asignatura de contar y toda la movida</field>
+    </record>
+    <record model="openacademy.course" id="curso1">
+        <field name="name">Lengua</field>
+        <field name="description">Aprende a mover el musculo de tu boca como dios</field>
+    </record>
+    <record model="openacademy.course" id="curso2">
+        <field name="name">Informatica</field>
+        <field name="description">Asignatura para dominar el Ctrl+C y Ctrl+V</field>
+    </record>
+
+</odoo>

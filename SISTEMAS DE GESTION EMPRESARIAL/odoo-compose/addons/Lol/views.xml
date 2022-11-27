@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <record id="view_lol_base_form" model="ir.ui.view">
+    <field name="name">lol.base.form</field>
+    <field name="model">lol.base</field>
+    <field name="arch" type="xml">
+      <form string="LOL Base">
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="description"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="view_lol_mapa_form" model="ir.ui.view">
+    <field name="name">lol.mapa.form</field>
+    <field name="model">lol.mapa</field>
+    <field name="inherit_id" ref="view_lol_base_form"/>
+    <field name="arch" type="xml">
+      <field name="description" position="after">
+        <field name="width"/>
+        <field name="height"/>
+      </field>
+    </field>
+  </record>
+
+  <record id="mapa_action" model="ir.actions.act_window">
+    <field name="name">Mapas</field>
+    <field name="res_model">lol.mapa</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+    <record id="Heroes_action" model="ir.actions.act_window">
+		<field name="name">Heroes</field>
+		<field name="res_model">lol.heroes</field>
+		<field name="view_mode">tree,form</field>
+    </record>
+
+
+	<record id="villanos_action" model="ir.actions.act_window">
+		<field name="name">Villanos</field>
+		<field name="res_model">lol.villanos</field>
+		<field name="view_mode">tree,form</field>	
+    </record>
+
+    <record id="batallas_action" model="ir.actions.act_window">
+		<field name="name">Batallas</field>
+		<field name="res_model">lol.batallas</field>
+		<field name="view_mode">tree,form,calendar</field>
+    </record>
+    
+    <record id="Batallas_calendar" model="ir.ui.view">
+		<field name="name">Batallas Calendar</field>
+		<field name="model">lol.batallas</field>
+		<field name="type">calendar</field>
+		<field name="arch" type="xml">
+			<calendar string="Batallas" date_start="fecha">
+			<field name="name"/>
+			<field name="fecha"/>
+      <field name="lugar"/>
+			</calendar>
+		</field>
+    </record>
+
+    <record id="Batallas_tree" model="ir.ui.view">
+        <field name="name">Batallas Tree</field>
+        <field name="model">lol.batallas</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+        <tree string="Batallas">
+            <field name="name"/>
+            <field name="fecha"/>
+            <field name="lugar"/>
+        </tree>
+        </field>
+    </record>
+
+  <record id="Batallas_search" model="ir.ui.view">
+    <field name="name">Batallas Search</field>
+    <field name="model">lol.batallas</field>
+    <field name="type">search</field>
+    <field name="arch" type="xml">
+      <search string="Batallas">
+        <field name="name"/>
+        <field name="fecha"/>
+        <field name="lugar"/>
+      </search>
+      <filter string="Zaragoza" name="zaragoza" domain="[('lugar','=','Zaragoza')]"/>
+    </field>
+  </record>
+
+
+
+	<record id="Heroes_form" model="ir.ui.view">
+		<field name="name">heroes.form</field>
+		<field name="model">lol.heroes</field>
+		<field name="arch" type="xml">
+			<form string="Heroes">
+				<group>
+					<field name="name"/>
+          <field name="edad"/>
+          <field name="altura"/>
+          <field name="peso"/>
+          <field name="imc"/>
+          <field name="anno_nacimiento"/>
+
+				</group>
+			</form>
+		</field>
+	</record>
+	<record id="villanos_form" model="ir.ui.view">
+		<field name="name">villanos.form</field>
+		<field name="model">lol.villanos</field>
+		<field name="arch" type="xml">
+			<form string="Villanos">
+				<group>
+					<field name="nombre"/>
+				</group>
+			</form>
+		</field>
+    </record>
+	<record id="Debilidades_action" model="ir.actions.act_window">
+		<field name="name">Debilidades</field>
+		<field name="res_model">lol.debilidades</field>
+		<field name="view_mode">tree,form</field>
+    </record>
+<menuitem
+	id="lol_root_menu"
+	name="LOL"
+	sequence="10"/>
+<menuitem
+	id="heroes_menu"
+	name="heroes"
+	action="Heroes_action"
+	parent="lol_root_menu"/>
+<menuitem
+	id="villanos_menu"
+	name="villanos"
+	action="villanos_action"
+	parent="lol_root_menu"/>
+<menuitem name="Debilidades" id="debilides_menu" parent="lol_root_menu" action="Debilidades_action"/>
+
+    <menuitem id="batallas_menu" name="Batallas" parent="lol_root_menu" action="batallas_action" />
+
+    <menuitem id="mapa_menu" name="Mapa" parent="lol_root_menu" action="mapa_action" />
+</odoo>
