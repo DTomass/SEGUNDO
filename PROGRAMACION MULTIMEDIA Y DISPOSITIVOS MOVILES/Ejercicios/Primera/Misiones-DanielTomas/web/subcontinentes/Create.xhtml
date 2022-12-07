@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateSubcontinentesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateSubcontinentesLabel_codSubcontinente}" for="codSubcontinente" />
+                    <h:inputText id="codSubcontinente" value="#{subcontinentesController.selected.codSubcontinente}" title="#{bundle.CreateSubcontinentesTitle_codSubcontinente}" required="true" requiredMessage="#{bundle.CreateSubcontinentesRequiredMessage_codSubcontinente}"/>
+                    <h:outputLabel value="#{bundle.CreateSubcontinentesLabel_nomSubcontinente}" for="nomSubcontinente" />
+                    <h:inputText id="nomSubcontinente" value="#{subcontinentesController.selected.nomSubcontinente}" title="#{bundle.CreateSubcontinentesTitle_nomSubcontinente}" />
+                    <h:outputLabel value="#{bundle.CreateSubcontinentesLabel_codContinente}" for="codContinente" />
+                    <h:selectOneMenu id="codContinente" value="#{subcontinentesController.selected.codContinente}" title="#{bundle.CreateSubcontinentesTitle_codContinente}" >
+                        <f:selectItems value="#{continentesController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{subcontinentesController.create}" value="#{bundle.CreateSubcontinentesSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{subcontinentesController.prepareList}" value="#{bundle.CreateSubcontinentesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateSubcontinentesIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

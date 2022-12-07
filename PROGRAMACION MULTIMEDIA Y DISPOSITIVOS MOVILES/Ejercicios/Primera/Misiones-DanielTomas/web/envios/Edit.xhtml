@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditEnviosTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditEnviosLabel_enviosPK_fecha}" for="enviosPK_fecha" />
+                    <h:inputText id="enviosPK_fecha" value="#{enviosController.selected.enviosPK.fecha}" title="#{bundle.EditEnviosTitle_enviosPK_fecha}" required="true" requiredMessage="#{bundle.EditEnviosRequiredMessage_enviosPK_fecha}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditEnviosLabel_cantidad}" for="cantidad" />
+                    <h:inputText id="cantidad" value="#{enviosController.selected.cantidad}" title="#{bundle.EditEnviosTitle_cantidad}" />
+                    <h:outputLabel value="#{bundle.EditEnviosLabel_acuseReciboMs}" for="acuseReciboMs" />
+                    <h:inputText id="acuseReciboMs" value="#{enviosController.selected.acuseReciboMs}" title="#{bundle.EditEnviosTitle_acuseReciboMs}" required="true" requiredMessage="#{bundle.EditEnviosRequiredMessage_acuseReciboMs}"/>
+                    <h:outputLabel value="#{bundle.EditEnviosLabel_acuseBanco}" for="acuseBanco" />
+                    <h:inputText id="acuseBanco" value="#{enviosController.selected.acuseBanco}" title="#{bundle.EditEnviosTitle_acuseBanco}" required="true" requiredMessage="#{bundle.EditEnviosRequiredMessage_acuseBanco}"/>
+                    <h:outputLabel value="#{bundle.EditEnviosLabel_comentario}" for="comentario" />
+                    <h:inputTextarea rows="4" cols="30" id="comentario" value="#{enviosController.selected.comentario}" title="#{bundle.EditEnviosTitle_comentario}" />
+                    <h:outputLabel value="#{bundle.EditEnviosLabel_proyectos}" for="proyectos" />
+                    <h:selectOneMenu id="proyectos" value="#{enviosController.selected.proyectos}" title="#{bundle.EditEnviosTitle_proyectos}" required="true" requiredMessage="#{bundle.EditEnviosRequiredMessage_proyectos}">
+                        <f:selectItems value="#{proyectosController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{enviosController.update}" value="#{bundle.EditEnviosSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditEnviosViewLink}"/>
+                <br />
+                <h:commandLink action="#{enviosController.prepareList}" value="#{bundle.EditEnviosShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditEnviosIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

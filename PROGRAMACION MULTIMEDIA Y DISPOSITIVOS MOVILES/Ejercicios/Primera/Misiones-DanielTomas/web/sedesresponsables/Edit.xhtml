@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditSedesresponsablesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditSedesresponsablesLabel_sedesresponsablesPK_fechaInicio}" for="sedesresponsablesPK_fechaInicio" />
+                    <h:inputText id="sedesresponsablesPK_fechaInicio" value="#{sedesresponsablesController.selected.sedesresponsablesPK.fechaInicio}" title="#{bundle.EditSedesresponsablesTitle_sedesresponsablesPK_fechaInicio}" required="true" requiredMessage="#{bundle.EditSedesresponsablesRequiredMessage_sedesresponsablesPK_fechaInicio}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditSedesresponsablesLabel_fechaFin}" for="fechaFin" />
+                    <h:inputText id="fechaFin" value="#{sedesresponsablesController.selected.fechaFin}" title="#{bundle.EditSedesresponsablesTitle_fechaFin}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditSedesresponsablesLabel_email}" for="email" />
+                    <h:inputText id="email" value="#{sedesresponsablesController.selected.email}" title="#{bundle.EditSedesresponsablesTitle_email}" />
+                    <h:outputLabel value="#{bundle.EditSedesresponsablesLabel_telefono}" for="telefono" />
+                    <h:inputText id="telefono" value="#{sedesresponsablesController.selected.telefono}" title="#{bundle.EditSedesresponsablesTitle_telefono}" />
+                    <h:outputLabel value="#{bundle.EditSedesresponsablesLabel_responsables}" for="responsables" />
+                    <h:selectOneMenu id="responsables" value="#{sedesresponsablesController.selected.responsables}" title="#{bundle.EditSedesresponsablesTitle_responsables}" required="true" requiredMessage="#{bundle.EditSedesresponsablesRequiredMessage_responsables}">
+                        <f:selectItems value="#{responsablesController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditSedesresponsablesLabel_sedes}" for="sedes" />
+                    <h:selectOneMenu id="sedes" value="#{sedesresponsablesController.selected.sedes}" title="#{bundle.EditSedesresponsablesTitle_sedes}" required="true" requiredMessage="#{bundle.EditSedesresponsablesRequiredMessage_sedes}">
+                        <f:selectItems value="#{sedesController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{sedesresponsablesController.update}" value="#{bundle.EditSedesresponsablesSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditSedesresponsablesViewLink}"/>
+                <br />
+                <h:commandLink action="#{sedesresponsablesController.prepareList}" value="#{bundle.EditSedesresponsablesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditSedesresponsablesIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

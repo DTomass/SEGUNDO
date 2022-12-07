@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using RazorPages.Modelos;
+
 
 namespace RazorPages.Service
 {
@@ -17,9 +21,8 @@ namespace RazorPages.Service
         }
         public Alumno Add(Alumno alumnoNuevo)
         {
-            context.Alumnos.Add(alumnoNuevo);
-            context.SaveChanges();
-            return alumnoNuevo;
+            context.Database.ExecuteSqlRaw("InsertAlumno", alumnoNuevo.Id, alumnoNuevo.Email, alumnoNuevo.CursoID, alumnoNuevo);
+            return alumnoNuevo;    
         }
 
         public IEnumerable<CursoCuantos> AlumnosPorCurso(Curso? curso = null)
@@ -59,12 +62,15 @@ namespace RazorPages.Service
 
         public IEnumerable<Alumno> GetAllAlumnos()
         {
-            return context.Alumnos;
+            return context.Alumnos.FromSqlRaw<Alumno>("select * from Alumnos").ToList();
         }
 
         public Alumno GetAlumno(int id)
         {
-            return context.Alumnos.Find(id); //Busca por el campo que sea primary key
+            SqlParameter parameter = new SqlParameter("@Id", id);
+            return context.Alumnos.FromSqlRaw<Alumno>("GetAlumnoById @Id", parameter)
+                .ToList()
+                .FirstOrDefault(); //Busca por el campo que sea primary key
         }
 
         public Alumno Update(Alumno alumnoActualizado)

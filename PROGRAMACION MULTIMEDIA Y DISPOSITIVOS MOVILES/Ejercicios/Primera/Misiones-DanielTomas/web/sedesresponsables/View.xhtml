@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewSedesresponsablesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewSedesresponsablesLabel_sedesresponsablesPK_fechaInicio}"/>
+                    <h:outputText value="#{sedesresponsablesController.selected.sedesresponsablesPK.fechaInicio}" title="#{bundle.ViewSedesresponsablesTitle_sedesresponsablesPK_fechaInicio}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewSedesresponsablesLabel_fechaFin}"/>
+                    <h:outputText value="#{sedesresponsablesController.selected.fechaFin}" title="#{bundle.ViewSedesresponsablesTitle_fechaFin}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewSedesresponsablesLabel_email}"/>
+                    <h:outputText value="#{sedesresponsablesController.selected.email}" title="#{bundle.ViewSedesresponsablesTitle_email}"/>
+                    <h:outputText value="#{bundle.ViewSedesresponsablesLabel_telefono}"/>
+                    <h:outputText value="#{sedesresponsablesController.selected.telefono}" title="#{bundle.ViewSedesresponsablesTitle_telefono}"/>
+                    <h:outputText value="#{bundle.ViewSedesresponsablesLabel_responsables}"/>
+                    <h:outputText value="#{sedesresponsablesController.selected.responsables}" title="#{bundle.ViewSedesresponsablesTitle_responsables}"/>
+                    <h:outputText value="#{bundle.ViewSedesresponsablesLabel_sedes}"/>
+                    <h:outputText value="#{sedesresponsablesController.selected.sedes}" title="#{bundle.ViewSedesresponsablesTitle_sedes}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{sedesresponsablesController.destroyAndView}" value="#{bundle.ViewSedesresponsablesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewSedesresponsablesEditLink}"/>
+                <br />
+                <h:commandLink action="#{sedesresponsablesController.prepareCreate}" value="#{bundle.ViewSedesresponsablesCreateLink}" />
+                <br />
+                <h:commandLink action="#{sedesresponsablesController.prepareList}" value="#{bundle.ViewSedesresponsablesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewSedesresponsablesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

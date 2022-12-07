@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditSectoresTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditSectoresLabel_codSector}" for="codSector" />
+                    <h:inputText id="codSector" value="#{sectoresController.selected.codSector}" title="#{bundle.EditSectoresTitle_codSector}" required="true" requiredMessage="#{bundle.EditSectoresRequiredMessage_codSector}"/>
+                    <h:outputLabel value="#{bundle.EditSectoresLabel_nomSector}" for="nomSector" />
+                    <h:inputText id="nomSector" value="#{sectoresController.selected.nomSector}" title="#{bundle.EditSectoresTitle_nomSector}" />
+                    <h:outputLabel value="#{bundle.EditSectoresLabel_nomSectoring}" for="nomSectoring" />
+                    <h:inputText id="nomSectoring" value="#{sectoresController.selected.nomSectoring}" title="#{bundle.EditSectoresTitle_nomSectoring}" />
+                    <h:outputLabel value="#{bundle.EditSectoresLabel_sectorCad}" for="sectorCad" />
+                    <h:inputText id="sectorCad" value="#{sectoresController.selected.sectorCad}" title="#{bundle.EditSectoresTitle_sectorCad}" />
+                    <h:outputLabel value="#{bundle.EditSectoresLabel_explicacion}" for="explicacion" />
+                    <h:inputTextarea rows="4" cols="30" id="explicacion" value="#{sectoresController.selected.explicacion}" title="#{bundle.EditSectoresTitle_explicacion}" />
+                    <h:outputLabel value="#{bundle.EditSectoresLabel_explicacioning}" for="explicacioning" />
+                    <h:inputTextarea rows="4" cols="30" id="explicacioning" value="#{sectoresController.selected.explicacioning}" title="#{bundle.EditSectoresTitle_explicacioning}" />
+                </h:panelGrid>
+                <h:commandLink action="#{sectoresController.update}" value="#{bundle.EditSectoresSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditSectoresViewLink}"/>
+                <br />
+                <h:commandLink action="#{sectoresController.prepareList}" value="#{bundle.EditSectoresShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditSectoresIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditEntidadesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditEntidadesLabel_codigo}" for="codigo" />
+                    <h:inputText id="codigo" value="#{entidadesController.selected.codigo}" title="#{bundle.EditEntidadesTitle_codigo}" required="true" requiredMessage="#{bundle.EditEntidadesRequiredMessage_codigo}"/>
+                    <h:outputLabel value="#{bundle.EditEntidadesLabel_nomEntidad}" for="nomEntidad" />
+                    <h:inputText id="nomEntidad" value="#{entidadesController.selected.nomEntidad}" title="#{bundle.EditEntidadesTitle_nomEntidad}" />
+                    <h:outputLabel value="#{bundle.EditEntidadesLabel_tipoEntidad}" for="tipoEntidad" />
+                    <h:selectOneMenu id="tipoEntidad" value="#{entidadesController.selected.tipoEntidad}" title="#{bundle.EditEntidadesTitle_tipoEntidad}" >
+                        <f:selectItems value="#{tiposentidadesController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{entidadesController.update}" value="#{bundle.EditEntidadesSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditEntidadesViewLink}"/>
+                <br />
+                <h:commandLink action="#{entidadesController.prepareList}" value="#{bundle.EditEntidadesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditEntidadesIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

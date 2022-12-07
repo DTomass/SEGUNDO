@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewSectoresTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewSectoresLabel_codSector}"/>
+                    <h:outputText value="#{sectoresController.selected.codSector}" title="#{bundle.ViewSectoresTitle_codSector}"/>
+                    <h:outputText value="#{bundle.ViewSectoresLabel_nomSector}"/>
+                    <h:outputText value="#{sectoresController.selected.nomSector}" title="#{bundle.ViewSectoresTitle_nomSector}"/>
+                    <h:outputText value="#{bundle.ViewSectoresLabel_nomSectoring}"/>
+                    <h:outputText value="#{sectoresController.selected.nomSectoring}" title="#{bundle.ViewSectoresTitle_nomSectoring}"/>
+                    <h:outputText value="#{bundle.ViewSectoresLabel_sectorCad}"/>
+                    <h:outputText value="#{sectoresController.selected.sectorCad}" title="#{bundle.ViewSectoresTitle_sectorCad}"/>
+                    <h:outputText value="#{bundle.ViewSectoresLabel_explicacion}"/>
+                    <h:outputText value="#{sectoresController.selected.explicacion}" title="#{bundle.ViewSectoresTitle_explicacion}"/>
+                    <h:outputText value="#{bundle.ViewSectoresLabel_explicacioning}"/>
+                    <h:outputText value="#{sectoresController.selected.explicacioning}" title="#{bundle.ViewSectoresTitle_explicacioning}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{sectoresController.destroyAndView}" value="#{bundle.ViewSectoresDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewSectoresEditLink}"/>
+                <br />
+                <h:commandLink action="#{sectoresController.prepareCreate}" value="#{bundle.ViewSectoresCreateLink}" />
+                <br />
+                <h:commandLink action="#{sectoresController.prepareList}" value="#{bundle.ViewSectoresShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewSectoresIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

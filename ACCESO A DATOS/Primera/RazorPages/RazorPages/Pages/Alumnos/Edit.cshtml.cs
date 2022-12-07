@@ -32,20 +32,20 @@ namespace RazorPages.Pages.Alumnos
         {
             if (Photo != null)
             {
-                alumno.Foto = Photo.FileName;
-            }
-            if (ModelState.IsValid)
-            {
-                if (Photo != null)
+                if (alumno.Foto != null)
                 {
-                    if(alumno.Foto != null)
-                    {
-                        string filePath = Path.Combine(WebHostBuilder, "");
-                        System.IO.File.Delete(filePath);
-                    }
+                    string filePath = Path.Combine(WebHostEnvironment.WebRootPath, "images", alumno.Foto);
+                    System.IO.File.Delete(filePath);
                 }
             }
-            alumnoRepositorio.Update(alumno);
+            if (alumno.Id > 0)
+            {
+                alumnoRepositorio.Update(alumno);
+            }
+            else
+            {
+                alumnoRepositorio.Add(alumno);
+            }
             return RedirectToPage("Index");
         }
         private string ProcessUploadedFile()

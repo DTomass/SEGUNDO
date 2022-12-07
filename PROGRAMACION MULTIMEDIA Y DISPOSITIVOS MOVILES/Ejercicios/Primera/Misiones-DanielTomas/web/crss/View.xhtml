@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewCrssTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewCrssLabel_codCrs}"/>
+                    <h:outputText value="#{crssController.selected.codCrs}" title="#{bundle.ViewCrssTitle_codCrs}"/>
+                    <h:outputText value="#{bundle.ViewCrssLabel_nomCrs}"/>
+                    <h:outputText value="#{crssController.selected.nomCrs}" title="#{bundle.ViewCrssTitle_nomCrs}"/>
+                    <h:outputText value="#{bundle.ViewCrssLabel_nomCrsingles}"/>
+                    <h:outputText value="#{crssController.selected.nomCrsingles}" title="#{bundle.ViewCrssTitle_nomCrsingles}"/>
+                    <h:outputText value="#{bundle.ViewCrssLabel_informacionesesp}"/>
+                    <h:outputText value="#{crssController.selected.informacionesesp}" title="#{bundle.ViewCrssTitle_informacionesesp}"/>
+                    <h:outputText value="#{bundle.ViewCrssLabel_informacionesing}"/>
+                    <h:outputText value="#{crssController.selected.informacionesing}" title="#{bundle.ViewCrssTitle_informacionesing}"/>
+                    <h:outputText value="#{bundle.ViewCrssLabel_codCadsub}"/>
+                    <h:outputText value="#{crssController.selected.codCadsub}" title="#{bundle.ViewCrssTitle_codCadsub}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{crssController.destroyAndView}" value="#{bundle.ViewCrssDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewCrssEditLink}"/>
+                <br />
+                <h:commandLink action="#{crssController.prepareCreate}" value="#{bundle.ViewCrssCreateLink}" />
+                <br />
+                <h:commandLink action="#{crssController.prepareList}" value="#{bundle.ViewCrssShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewCrssIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

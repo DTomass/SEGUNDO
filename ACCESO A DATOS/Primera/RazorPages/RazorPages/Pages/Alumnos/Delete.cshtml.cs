@@ -9,14 +9,21 @@ namespace RazorPages.Pages.Alumnos
     public class DeleteModel : PageModel
     {
         private readonly IAlumnoRepositorio alumnoRepositorio;
-        public Alumno alumno;
+        [BindProperty]
+        public Alumno alumno { get; set; }
         public DeleteModel(IAlumnoRepositorio alumnoRepositorio)
         {
             this.alumnoRepositorio = alumnoRepositorio;
         }
-        public void OnGet(int id)
+        public IActionResult OnGet(int id)
         {
             alumno = alumnoRepositorio.GetAlumno(id);
+            return Page();
+        }
+        public IActionResult OnPost()
+        {
+            alumnoRepositorio.Delete(alumno.Id);
+            return RedirectToPage("Index");
         }
     }
 }

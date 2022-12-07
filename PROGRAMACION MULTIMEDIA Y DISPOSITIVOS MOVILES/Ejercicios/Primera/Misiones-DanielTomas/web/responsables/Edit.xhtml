@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditResponsablesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditResponsablesLabel_codResponsable}" for="codResponsable" />
+                    <h:inputText id="codResponsable" value="#{responsablesController.selected.codResponsable}" title="#{bundle.EditResponsablesTitle_codResponsable}" required="true" requiredMessage="#{bundle.EditResponsablesRequiredMessage_codResponsable}"/>
+                    <h:outputLabel value="#{bundle.EditResponsablesLabel_nomResponsable}" for="nomResponsable" />
+                    <h:inputText id="nomResponsable" value="#{responsablesController.selected.nomResponsable}" title="#{bundle.EditResponsablesTitle_nomResponsable}" />
+                    <h:outputLabel value="#{bundle.EditResponsablesLabel_tratamiento}" for="tratamiento" />
+                    <h:inputText id="tratamiento" value="#{responsablesController.selected.tratamiento}" title="#{bundle.EditResponsablesTitle_tratamiento}" />
+                    <h:outputLabel value="#{bundle.EditResponsablesLabel_tipoMisionero}" for="tipoMisionero" />
+                    <h:inputText id="tipoMisionero" value="#{responsablesController.selected.tipoMisionero}" title="#{bundle.EditResponsablesTitle_tipoMisionero}" />
+                </h:panelGrid>
+                <h:commandLink action="#{responsablesController.update}" value="#{bundle.EditResponsablesSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditResponsablesViewLink}"/>
+                <br />
+                <h:commandLink action="#{responsablesController.prepareList}" value="#{bundle.EditResponsablesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditResponsablesIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
