@@ -1,7 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+using Tomás.Service;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddScoped<SeleccionesRepositorioDb, SeleccionesRepositorioDb>();
+
+IConfiguration configuration = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json")
+    .AddEnvironmentVariables()
+    .Build();
+
+builder.Services.AddDbContextPool<SeleccionesDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("MundialDbConnection")));
 
 var app = builder.Build();
 
@@ -12,6 +23,7 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

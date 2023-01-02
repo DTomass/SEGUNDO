@@ -1,0 +1,24 @@
+﻿@page
+@model Tomás.Pages.Selecciones.SeleccionesModel
+@{
+}
+<h1>@Model.Seleccion.Count() SELECCIONES</h1>
+<div class="col-sm-8">
+	@await Component.InvokeAsync("SeleccionesGrupo")
+</div>
+<div class="card-group">
+	@foreach (var seleccion in Model.Seleccion)
+	{
+		var photo = "~/images/" + (seleccion.Bandera ?? "nodisponible.jpg");
+		<div class="card m-3" style="min-width : 18rem; max-width: 30.5%">
+			<div class="card-header">
+				<h3>@seleccion.NomPais</h3>
+			</div>
+			<img class="card-img-top imageThumbail" asp-append-version="true" src="@photo">
+			<div class="card-footer text-center">
+				<a asp-page="/Selecciones/Edit" asp-route-ID="@seleccion.Codigo" class="btn btn-primary m-1">Edit</a>
+			</div>
+		</div>
+
+	}
+</div>

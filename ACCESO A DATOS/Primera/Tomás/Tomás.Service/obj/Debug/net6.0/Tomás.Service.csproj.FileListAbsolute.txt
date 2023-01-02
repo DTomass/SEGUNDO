@@ -1,0 +1,15 @@
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Service\bin\Debug\net6.0\Tomás.Service.deps.json
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Service\bin\Debug\net6.0\Tomás.Service.dll
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Service\bin\Debug\net6.0\Tomás.Service.pdb
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Service\bin\Debug\net6.0\Tomás.Modelos.dll
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Service\bin\Debug\net6.0\Tomás.Modelos.pdb
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Service\obj\Debug\net6.0\Tomás.Service.csproj.AssemblyReference.cache
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Service\obj\Debug\net6.0\Tomás.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Service\obj\Debug\net6.0\Tomás.Service.AssemblyInfoInputs.cache
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Service\obj\Debug\net6.0\Tomás.Service.AssemblyInfo.cs
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Service\obj\Debug\net6.0\Tomás.Service.csproj.CoreCompileInputs.cache
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Service\obj\Debug\net6.0\Tomás.Service.csproj.CopyComplete
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Service\obj\Debug\net6.0\Tomás.Service.dll
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Service\obj\Debug\net6.0\refint\Tomás.Service.dll
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Service\obj\Debug\net6.0\Tomás.Service.pdb
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Service\obj\Debug\net6.0\ref\Tomás.Service.dll

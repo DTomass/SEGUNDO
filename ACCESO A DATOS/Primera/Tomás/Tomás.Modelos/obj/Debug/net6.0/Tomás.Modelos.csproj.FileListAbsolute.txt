@@ -1,0 +1,12 @@
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Modelos\bin\Debug\net6.0\Tomás.Modelos.deps.json
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Modelos\bin\Debug\net6.0\Tomás.Modelos.dll
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Modelos\bin\Debug\net6.0\Tomás.Modelos.pdb
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Modelos\obj\Debug\net6.0\Tomás.Modelos.csproj.AssemblyReference.cache
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Modelos\obj\Debug\net6.0\Tomás.Modelos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Modelos\obj\Debug\net6.0\Tomás.Modelos.AssemblyInfoInputs.cache
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Modelos\obj\Debug\net6.0\Tomás.Modelos.AssemblyInfo.cs
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Modelos\obj\Debug\net6.0\Tomás.Modelos.csproj.CoreCompileInputs.cache
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Modelos\obj\Debug\net6.0\Tomás.Modelos.dll
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Modelos\obj\Debug\net6.0\refint\Tomás.Modelos.dll
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Modelos\obj\Debug\net6.0\Tomás.Modelos.pdb
+C:\Users\danie\OneDrive\Documents\SEGUNDO\ACCESO A DATOS\Primera\Tomás\Tomás.Modelos\obj\Debug\net6.0\ref\Tomás.Modelos.dll

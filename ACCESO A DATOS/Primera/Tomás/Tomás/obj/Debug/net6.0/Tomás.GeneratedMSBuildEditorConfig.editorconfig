@@ -19,6 +19,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/danie/OneDrive/Documents/SEGUNDO/ACCESO A DATOS/Primera/Tomás/Tomás/Pages/Grupos/Grupos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3J1cG9zXEdydXBvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/danie/OneDrive/Documents/SEGUNDO/ACCESO A DATOS/Primera/Tomás/Tomás/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -27,8 +31,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/OneDrive/Documents/SEGUNDO/ACCESO A DATOS/Primera/Tomás/Tomás/Pages/Selecciones/IndexList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VsZWNjaW9uZXNcSW5kZXhMaXN0LmNzaHRtbA==
+[C:/Users/danie/OneDrive/Documents/SEGUNDO/ACCESO A DATOS/Primera/Tomás/Tomás/Pages/Selecciones/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VsZWNjaW9uZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danie/OneDrive/Documents/SEGUNDO/ACCESO A DATOS/Primera/Tomás/Tomás/Pages/Selecciones/Selecciones.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VsZWNjaW9uZXNcU2VsZWNjaW9uZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danie/OneDrive/Documents/SEGUNDO/ACCESO A DATOS/Primera/Tomás/Tomás/Pages/Shared/Components/SeleccionesGrupo/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXENvbXBvbmVudHNcU2VsZWNjaW9uZXNHcnVwb1xEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/danie/OneDrive/Documents/SEGUNDO/ACCESO A DATOS/Primera/Tomás/Tomás/Pages/Shared/_ValidationScriptsPartial.cshtml]
