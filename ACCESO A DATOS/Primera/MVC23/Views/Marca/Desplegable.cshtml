@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Desplegable";
+}
+
+<h1>Desplegable</h1>
+
+@Html.DropDownList("LasMarcas", new List<SelectListItem>{
+    new SelectListItem{Text="Opel", Value="1"},
+    new SelectListItem{Text="Ford", Value="3"},
+    new SelectListItem{Text="Mercedes", Value="3"}
+}, "Selecciona una marca")
+
+@Html.DropDownList("Marcas", "Selecciona una marca")
+
+<select id="Marcos" name="Marcos">
+    @foreach(MarcaModelo marca in ViewBag.Marcas2)
+    {
+        <option value=@marca.ID>@marca.Nom_marca</option>
+    }
+</select>

@@ -1,0 +1,21 @@
+<table>
+    <thead>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Direccion</th>
+        <th>Edad</th>
+    </thead>
+    <tbody>
+        <tr *ngFor='let item of alumnos'>
+            <td>{{item.nombre | uppercase}}</td>
+            <td>{{item.apellidos | uppercase}}</td>
+            <td>{{item.direccion | date:'dd/MM/y'}}</td>
+            <td>{{item.edad}}</td>
+        </tr *ngIf = "alumnos.lenght==0">
+            <td colspan="4">No hay alumnos</td>
+        <tr >
+
+        </tr>
+    </tbody>
+
+</table>

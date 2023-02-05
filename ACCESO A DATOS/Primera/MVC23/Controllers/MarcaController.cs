@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using MVC23.Models;
 
 namespace MVC23.Controllers
@@ -18,6 +19,12 @@ namespace MVC23.Controllers
         public ActionResult Index()
         {
             return View(contexto.Marcas.ToList());
+        }
+
+        public ActionResult List()
+        {
+            List<MarcaModelo> lista = contexto.Marcas.ToList();
+            return View(lista);
         }
 
         // GET: MarcaController/Details/5
@@ -90,6 +97,13 @@ namespace MVC23.Controllers
             {
                 return View();
             }
+        }
+
+        public ActionResult Desplegable()
+        {
+            ViewBag.Marcas = new SelectList(contexto.Marcas, "ID", "Nom_marca");
+            ViewBag.Marcas2 = contexto.Marcas.ToList();
+            return View();
         }
     }
 }
