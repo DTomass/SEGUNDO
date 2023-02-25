@@ -8,6 +8,13 @@ namespace MVC23.Controllers
 {
     public class VehiculoController : Controller
     {
+        public class VehiculoTotal
+        {
+            public string Nom_Marca { get; set; }
+            public string Nom_Serie { get; set; }
+            public string Color { get; set; }
+            public string Matricula { get; set; }
+        }
         public Contexto contexto { get;}
         public VehiculoController(Contexto contexto)
         {
@@ -34,6 +41,18 @@ namespace MVC23.Controllers
             return View(vehiculos);
         }
 
+        public ActionResult Listado3(int marcaID = 1, int serieID = 0)
+        {
+            List<VehiculoTotal> lista = contexto.Database.SqlQuery<VehiculoTotal>($"dbo.getSeriesVehiculos").ToList();
+            return View(lista);
+        }
+
+        public ActionResult Listado4(int marcaID = 1, int serieID = 0)
+        {
+            var lista = contexto.VistaTotal.FromSql($"EXECUTE getSeriesVehiculos").ToList();
+            return View(lista);
+        }
+
         // GET: VehiculoController/Details/5
         public ActionResult Details(int id)
         {
@@ -45,16 +64,27 @@ namespace MVC23.Controllers
         // GET: VehiculoController/Create
         public ActionResult Create()
         {
+            ViewBag.SerieID = new SelectList(contexto.Series, "ID", "Nom_Serie");
+            ViewBag.VehiculosExtras = new MultiSelectList(contexto.Vehiculos, "ID", "Nom_Extra");
             return View();
         }
 
         // POST: VehiculoController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(VehiculoModelo vehiculo)
         {
             try
             {
+                contexto.Vehiculos.Add(vehiculo);
+                contexto.SaveChanges();
+
+                foreach (var extraID in vehiculo.ExtraSeleccionados)
+                {
+                    var obj = new VehiculoExtraModelo() { ExtraID = extraID, VehiculoID = vehiculo.ID };
+                    contexto.VehiculoExtra.Add(obj);
+                }
+                contexto.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -66,8 +96,10 @@ namespace MVC23.Controllers
         // GET: VehiculoController/Edit/5
         public ActionResult Edit(int id)
         {
-            ViewBag.SerieID = new SelectList(contexto.Series, "ID", "Nom_Serie");
             VehiculoModelo vehiculo = contexto.Vehiculos.Find(id);
+            vehiculo.ExtraSeleccionados=contexto.VehiculoExtra.Where(a => a.VehiculoID == id).Select(a => a.ExtraID).ToList();
+            ViewBag.SerieID = new SelectList(contexto.Series, "ID", "Nom_Serie");
+            ViewBag.VehiculoExtras = new MultiSelectList(contexto.Extras, "ID", "Nom_Extra");
             return View(vehiculo);
         }
 
@@ -82,6 +114,15 @@ namespace MVC23.Controllers
                 vehiculo.Matricula = vehiculoActualizado.Matricula;
                 vehiculo.Color = vehiculoActualizado.Color;
                 vehiculo.SerieID = vehiculoActualizado.SerieID;
+                var extraActuales = contexto.VehiculoExtra.Where(v => v.VehiculoID == vehiculo.ID).ToList();
+                foreach (VehiculoExtraModelo extra in extraActuales)
+                {
+                    contexto.VehiculoExtra.Remove(extra);
+                }
+                for (int i = 0; i < vehiculoActualizado.ExtraSeleccionados.Count(); i++)
+                {
+                    vehiculo.ExtraSeleccionados.Add(vehiculoActualizado.ExtraSeleccionados[i]);
+                }
                 contexto.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }

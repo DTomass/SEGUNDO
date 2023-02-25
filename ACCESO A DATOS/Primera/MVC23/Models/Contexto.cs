@@ -9,9 +9,21 @@ namespace MVC23.Models
         {
 
         }
+        protected override void OnModelCreating(ModelBuilder model)
+        {
+            model
+                .Entity<VehiculoModelo>(
+                eb =>
+                {
+                    eb.HasNoKey();
+                });
+        }
         public DbSet<MarcaModelo> Marcas { get; set; }
         public DbSet<SerieModelo> Series { get; set; }
         public DbSet<VehiculoModelo> Vehiculos { get; set; }
+        public DbSet<VehiculoModelo> VistaTotal { get; set; }
+        public DbSet<ExtraModelo> Extras { get; set; }
+        public DbSet<VehiculoExtraModelo> VehiculoExtra { get; set; }
 
     }
 }

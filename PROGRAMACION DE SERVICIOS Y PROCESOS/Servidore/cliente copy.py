@@ -1,31 +1,53 @@
-import socket, threading
+#!/usr/bin/env python3.8
 
-def send():
-    while True:
-        msg = input('\nMe > ')
-        cli_sock.send(msg.encode())
+import socket
 
-def receive():
-    while True:
-        sen_name = cli_sock.recv(1024)
-        data = cli_sock.recv(1024)
+# Información de red para conectarse al servidor
+SERVER_ADDRESS = '192.168.10.79'
+SERVER_PORT = 8080
 
-        print('\n' + str(sen_name) + ' > ' + str(data))
+# Creamos el socket
+c = socket.socket()
 
-if __name__ == "__main__":   
-    # socket
-    cli_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+#Nos conectamos al servidor
 
-    # connect
-    HOST = '192.168.10.60'
-    PORT = 8808
-    cli_sock.connect((HOST, PORT))     
-    print('Connected to remote host...')
-    uname = input('Enter your name to enter the chat > ')
-    cli_sock.send(uname.encode())
+c.connect((SERVER_ADDRESS, SERVER_PORT))
 
-    thread_send = threading.Thread(target = send)
-    thread_send.start()
+# Comenzamos a enviar información al servidor desde nuestro teclado
+#try:
+#    input = input("algo:")
+#except NameError:
+#    pass
 
-    thread_receive = threading.Thread(target = receive)
-    thread_receive.start()
+print("Conectado al servidor: " + str((SERVER_ADDRESS, SERVER_PORT)))
+while True:
+    try:
+        data = input("Escribe un datote: ")
+    except EOFError:
+        print("\nBien, chao")
+        break
+
+    if not data:
+        print("No puedo enviar datos vacíos!")
+        print("Ctrl-D [or Ctrl-Z en Windows] para salir")
+        continue
+
+# Convertimoslos datos en bytes. (solo para Python 3)
+    data = data.encode()
+
+# Enviamos
+    c.send(data)
+
+# Recibimos respuesta desde el servidor
+    data = c.recv(2048)
+    if not data:
+        print("Server abended. Exiting")
+        break
+
+# Convertimos la respuesta en un string
+    data = data.decode()
+
+    print("Got this string from server:")
+    print(data + '\n')
+
+c.close()
