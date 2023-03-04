@@ -1,0 +1,16 @@
+salas = [
+        {"nombre":"sala_1", "usuarios":["192.168.1.10","192.168.1.11","192.168.1.12"]}
+        ,{"nombre":"sala_2", "usuarios":["192.168.1.2","192.168.1.5","192.168.1.10"]}
+    ]
+def delete(nom_sala, salas):
+    if nom_sala != "":
+        try:
+            for sala in salas:
+                if sala["nombre"] == nom_sala:
+                    salas.remove(sala)
+        except:
+            return "La sala "+nom_sala+" no ha podido ser borrada"
+        return "Sala "+nom_sala+" borrada correctamente"
+        # se elimina una sala         
+
+output = delete(instrucciones_split[1], salas)

@@ -1,2 +1,0 @@
-crear componente alumnocount
-3 atributos, todos, hombres, mujeres
