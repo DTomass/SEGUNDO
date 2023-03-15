@@ -10,3 +10,6 @@
 [submodule "DESARROLLO DE INTERFACES/DDI"]
 	path = DESARROLLO DE INTERFACES/DDI
 	url = https://github.com/SalesianosZaragoza/DDI
+[submodule "SISTEMAS DE GESTION EMPRESARIAL/SGE"]
+	path = SISTEMAS DE GESTION EMPRESARIAL/SGE
+	url = https://github.com/SalesianosZaragoza/SGE
