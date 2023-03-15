@@ -1,3 +1,4 @@
-[submodule "DESARROLLO DE INTERFACES/REST/RestExamen/rest"]
-	path = DESARROLLO DE INTERFACES/REST/RestExamen/rest
+
+[submodule "DESARROLLO DE INTERFACES/REST/RestExamen/REST"]
+	path = DESARROLLO DE INTERFACES/REST/RestExamen/REST
 	url = https://github.com/DTomass/REST.git
