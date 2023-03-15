@@ -4,3 +4,6 @@
 [submodule "DESARROLLO DE INTERFACES/REST/RestExamen/REST"]
 	path = DESARROLLO DE INTERFACES/REST/RestExamen/REST
 	url = https://github.com/DTomass/REST
+[submodule "DESARROLLO DE INTERFACES/REST/ExamenREST"]
+	path = DESARROLLO DE INTERFACES/REST/ExamenREST
+	url = https://github.com/DTomass/ExamenREST
