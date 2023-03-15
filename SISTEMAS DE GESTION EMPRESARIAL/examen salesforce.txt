@@ -1,0 +1,6 @@
+2 botones, play y stop, X Topos
+Evento play
+Tablero llama a clase apex -> devuelve numero aleatorio entre 1 y 4
+Llamada a comp hijo que activa metodo hijo activar.
+Si se hace click en cualquiera de ellos se comprueba que el elemento esta activo, se manda un evento, es recogido por el tablero si recibe acierto aumentan los puntos
+Al darle al boton stop que se muestre el marcador de puntos y pare el juego
