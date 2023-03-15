@@ -1,6 +1,6 @@
-[submodule "DESARROLLO DE INTERFACES/REST/RestExamen/REST"]
-	path = DESARROLLO DE INTERFACES/REST/RestExamen/REST
-	url = https://github.com/DTomass/REST.git
 [submodule "DESARROLLO DE INTERFACES/ExamenSpringBoot"]
 	path = DESARROLLO DE INTERFACES/ExamenSpringBoot
 	url = https://github.com/DTomass/ExamenSpringBoot
+[submodule "DESARROLLO DE INTERFACES/REST/RestExamen/REST"]
+	path = DESARROLLO DE INTERFACES/REST/RestExamen/REST
+	url = https://github.com/DTomass/REST
