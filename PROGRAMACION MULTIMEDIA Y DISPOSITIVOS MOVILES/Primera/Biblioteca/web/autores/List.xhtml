@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListAutoresTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form>
+                <p:dataTable var="autor" value="#{autoresController.items}" rows="10"
+                             paginator="true"
+                             paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                             currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records"
+                             rowsPerPageTemplate="5,10,15">
+                    <p:column headerText="Cod." sortBy="#{autor.codAutor}" width="auto" style="text-align: center">
+                        <h:outputText value="#{autor.codAutor}" />
+                    </p:column>
+                    <p:column headerText="Nombre" sortBy="#{autor.nomAutor}" width="auto" style="text-align: center">
+                        <h:outputText value="#{autor.nomAutor}" />
+                    </p:column>
+                    <p:column headerText="Aplldo1" sortBy="#{autor.apellido1}" width="auto" style="text-align: center">
+                        <h:outputText value="#{autor.apellido1}" />
+                    </p:column>
+                    <p:column headerText="Aplldo2" sortBy="#{autor.apellido2}" width="auto" style="text-align: center">
+                        <h:outputText value="#{autor.apellido2}" />
+                    </p:column>
+                    <p:column headerText="F. Nac" sortBy="#{autor.FNac}" width="auto" style="text-align: center">
+                        <h:outputText value="#{autor.FNac}" />
+                    </p:column>
+                    <p:column headerText="F. Def" sortBy="#{autor.FDef}" width="auto" style="text-align: center">
+                        <h:outputText value="#{autor.FDef}" />
+                    </p:column>
+                    <p:column headerText="Foto" sortBy="#{autor.foto}" width="auto" style="text-align: center">
+                        <h:outputText value="#{autor.foto}" />
+                    </p:column>
+                    <p:column headerText="Localidad" sortBy="#{autor.localidad}" width="auto" style="text-align: center">
+                        <h:outputText value="#{autor.localidad}" />
+                    </p:column>
+                    <p:column headerText="Biografia" sortBy="#{autor.biografia}" width="auto" style="text-align: center">
+                        <h:outputText value="#{autor.biografia}" />
+                    </p:column>
+                    <p:column headerText="Nacionalidad" sortBy="#{autor.nacionalidad}" width="auto" style="text-align: center">
+                        <h:outputText value="#{autor.nacionalidad}" />
+                    </p:column>
+                    <p:column width="30">
+                        <h:commandLink action="#{autoresController.prepareView}" value="#{bundle.ListAutoresViewLink}"/>
+                        <h:outputText value=" "/>
+                        <h:commandLink action="#{autoresController.prepareEdit}" value="#{bundle.ListAutoresEditLink}"/>
+                        <h:outputText value=" "/>
+                        <h:commandLink action="#{autoresController.destroy}" value="#{bundle.ListAutoresDestroyLink}"/>
+                    </p:column>
+                    
+                    <f:facet name="paginatorTopLeft">
+                        <p:commandButton type="button" icon="pi pi-refresh" />
+                    </f:facet>
+                </p:dataTable>
+                <br />
+                <h:commandLink action="#{autoresController.prepareCreate}" value="#{bundle.ListAutoresCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListAutoresIndexLink}"/>
+                <br />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

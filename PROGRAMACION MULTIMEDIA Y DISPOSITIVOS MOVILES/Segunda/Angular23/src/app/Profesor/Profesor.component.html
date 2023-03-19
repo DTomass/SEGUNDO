@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellidos</th>
+      <th>Titulación</th>
+      <th>Fecha Ing.</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor='let profesor of profesores'>
+        <td>{{profesor.Nombre }}</td>
+        <td>{{profesor.Apellidos }}</td>
+        <td>{{profesor.Titulacion }}</td>
+        <td>{{profesor.FIngreso }}</td>
+      </tr>
+  </tbody>
+</table>

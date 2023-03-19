@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditAutoresTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <style type="text/css">
+                .ui-panelgrid.showcase-text-align-center .ui-grid-responsive .ui-panelgrid-cell {
+                    text-align: center;
+                }
+
+                .customPanelGrid .ui-panelgrid-content {
+                    align-items: center;
+                }
+            </style>
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <p:panelGrid columns="2" layout="flex" columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4" contentStyleClass="ui-fluid">
+                    <p:outputLabel value="#{bundle.EditAutoresLabel_codAutor}" for="codAutor" />
+                    <p:inputText id="codAutor" value="#{autoresController.selected.codAutor}" title="#{bundle.EditAutoresTitle_codAutor}" required="true" requiredMessage="#{bundle.EditAutoresRequiredMessage_codAutor}"/>
+                    <p:outputLabel value="#{bundle.EditAutoresLabel_nomAutor}" for="nomAutor" />
+                    <p:inputText id="nomAutor" value="#{autoresController.selected.nomAutor}" title="#{bundle.EditAutoresTitle_nomAutor}" />
+                    <p:outputLabel value="#{bundle.EditAutoresLabel_apellido1}" for="apellido1" />
+                    <p:inputText id="apellido1" value="#{autoresController.selected.apellido1}" title="#{bundle.EditAutoresTitle_apellido1}" />
+                    <p:outputLabel value="#{bundle.EditAutoresLabel_apellido2}" for="apellido2" />
+                    <p:inputText id="apellido2" value="#{autoresController.selected.apellido2}" title="#{bundle.EditAutoresTitle_apellido2}" />
+                    <p:outputLabel value="#{bundle.EditAutoresLabel_FNac}" for="FNac" />
+                    <p:datePicker id="FNac" value="#{autoresController.selected.FNac}" title="#{bundle.EditAutoresTitle_FNac}" showIcon="true" style="width:auto" >
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </p:datePicker>
+                    <p:outputLabel value="#{bundle.EditAutoresLabel_FDef}" for="FDef" />
+                    <p:datePicker id="FDef" value="#{autoresController.selected.FDef}" title="#{bundle.EditAutoresTitle_FDef}" showIcon="true" style="width:auto" >
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </p:datePicker>
+                    <p:outputLabel value="#{bundle.EditAutoresLabel_foto}" for="foto" />
+                    <p:inputText id="foto" value="#{autoresController.selected.foto}" title="#{bundle.EditAutoresTitle_foto}" />
+                    <p:outputLabel value="#{bundle.EditAutoresLabel_localidad}" for="localidad" />
+                    <p:inputText id="localidad" value="#{autoresController.selected.localidad}" title="#{bundle.EditAutoresTitle_localidad}" />
+                    <p:outputLabel value="#{bundle.EditAutoresLabel_biografia}" for="biografia" />
+                    <p:inputTextarea rows="4" cols="30" id="biografia" value="#{autoresController.selected.biografia}" title="#{bundle.EditAutoresTitle_biografia}" />
+                    <p:outputLabel value="#{bundle.EditAutoresLabel_nacionalidad}" for="nacionalidad" />
+                    <p:selectOneMenu id="nacionalidad" value="#{autoresController.selected.nacionalidad}" title="#{bundle.EditAutoresTitle_nacionalidad}" >
+                        <f:selectItems value="#{paisesController.itemsAvailableSelectOne}"/>
+                    </p:selectOneMenu>
+                </p:panelGrid>
+                <h:commandLink action="#{autoresController.update}" value="#{bundle.EditAutoresSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditAutoresViewLink}"/>
+                <br />
+                <h:commandLink action="#{autoresController.prepareList}" value="#{bundle.EditAutoresShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditAutoresIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
