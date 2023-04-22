@@ -1,0 +1,4 @@
+<select [(ngModel)]="eleccion" (change)="alCambiar()">
+  <option value="0">Elige un departamento</option>
+  <option *ngFor="let departamento of departamentos" [value]="departamento.ID">{{departamento.NomDepartamento}}</option>
+</select>

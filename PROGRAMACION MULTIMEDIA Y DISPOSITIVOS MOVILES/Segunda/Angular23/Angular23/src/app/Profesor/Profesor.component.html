@@ -1,0 +1,22 @@
+<br><br>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Fecha de Ingreso</th>
+      <th>Titulacion</th>
+    </tr>
+    <ng-container *ngFor='let profesor of profesores'>
+      <tr>
+        <td>{{profesor.Nombre}}</td>
+        <td>{{profesor.Apellidos}}</td>
+        <td>{{profesor.Fecha_Ingreso}}</td>
+        <td>{{profesor.Titulacion}}</td>
+      </tr>
+    </ng-container>
+    <tr *ngIf='profesores.length == 0'>
+      <td colspan="4">No hay profesores</td>
+    </tr>
+  </thead>
+</table>

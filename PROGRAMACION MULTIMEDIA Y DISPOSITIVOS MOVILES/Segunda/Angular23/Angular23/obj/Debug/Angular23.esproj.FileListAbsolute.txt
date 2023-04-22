@@ -1,0 +1,2 @@
+C:\Users\danie\OneDrive\Documents\SEGUNDO\PROGRAMACION MULTIMEDIA Y DISPOSITIVOS MOVILES\Segunda\Angular23\Angular23\obj\Debug\Angular23.esproj.SuggestedBindingRedirects.cache
+C:\Users\danie\OneDrive\Documents\SEGUNDO\PROGRAMACION MULTIMEDIA Y DISPOSITIVOS MOVILES\Segunda\Angular23\Angular23\obj\Debug\Angular23.esproj.CoreCompileInputs.cache
